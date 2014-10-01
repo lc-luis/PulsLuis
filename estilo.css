@@ -6,6 +6,24 @@ body{
 	font-family: Arial;
 	font-size: 16px;
 }
+footer{
+	background: #22BCE0;
+	color: rgba(255, 255, 255, 0.7);
+	padding: 1rem;
+	text-align: center;
+}
+footer p:first-child{
+	margin-bottom: 0px;
+}
+footer p:last-child{
+	margin-top: 0px;
+}
+footer p:last-child:before{
+	content: "- ";
+}
+footer p:last-child:after{
+	content: " -";
+}
 header{
 	background: #343B54;
 	color: white;
@@ -39,4 +57,108 @@ header #avatar img{
 	border-radius: 50%;
 	width: 3.4375rem;
 }
+nav{
+	background: #80BCA3;
+	margin: 0px;
+	padding: 0 0.5rem;
+	position: relative;
+}
+nav ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+nav ul li{
+	display: inline-block;
+	margin: 0px 1rem 0px 0px;
+}
+nav ul #publicar_nav{
+	position: absolute;
+	right: 0px;
+	top: -0.4rem;
+}
+nav ul #publicar_nav a{
+	background: #22BCE0;
+	border-radius: 0.3rem;
+	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+	font-style: italic;
+	padding: 0.8rem 0.5rem;
+	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+}
+nav ul li a{
+	color: white;
+	display: block;
+	padding: 0.5rem 0px;
+	text-decoration: none;
+}
+
+#contenido{
+	margin: 1rem;
+}
+#contenido .item{
+	background: white;
+	border-bottom: 3px solid #22BCE0;
+	margin-bottom: 2rem;
+	min-height: 128px;
+	position: relative;
+}
+#contenido .item .autor_item{
+	color: #AAA;
+}
+#contenido .item .autor_item a{
+	text-decoration: none;
+}
+#contenido .item .datos_item{
+	color: #AAA;
+	margin: 1rem 1rem 0 0;
+	text-align: right;
+}
+#contenido .item .datos_item .tag_item{
+	background: #F4502A;
+	border-radius: 0.5rem;
+	color: white;
+	display: inline-block;
+	float: left;
+	padding: 0.2rem 0.5rem;
+	text-decoration: none;
+}
+#contenido .item .img_item{
+	float: left;
+	margin: 0 0.5rem 0 0;
+}
+#contenido .item .img_item img{
+	width: 96px;
+}
+#contenido .item .titulo_item{
+	font-size: 1.2rem;
+	padding: 1rem 1rem 0 0; 
+}
+#contenido .item .titulo_item a{
+	color: #444;
+	font-style: italic;
+	text-decoration: none;
+}
+#contenido .item .votacion{
+	background: white;
+	border-radius: 0 0 0.5rem 0.5rem;
+	left: 5%;
+	padding: 0.2rem 0.5rem; 
+	position: absolute;
+	margin-top: 3px;
+	top: 100%;
+	width: 90%;
+}
+#contenido .item .votacion .comentarios_item,
+#contenido .item .votacion .guardar_item{
+	float: right;
+}
+
+
+
+
+
+
+
+
+
 
