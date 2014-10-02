@@ -1,9 +1,51 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fuentes/icomoon.eot?-43cyj0');
+	src:url('../fuentes/icomoon.eot?#iefix-43cyj0') format('embedded-opentype'),
+		url('../fuentes/icomoon.woff?-43cyj0') format('woff'),
+		url('../fuentes/icomoon.ttf?-43cyj0') format('truetype'),
+		url('../fuentes/icomoon.svg?-43cyj0#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-flecha-down:before {
+	content: "\f05b";
+}
+.icon-flecha-up:before {
+	content: "\f0aa";
+}
+.icon-pluma:before {
+	content: "\e601";
+	margin-right: 0.4rem;
+}
+.icon-estrella:before {
+	content: "\f005";
+	margin: 0.4rem;
+	position: relative;
+	top: 0.2rem;
+}
+
 a{
 	color: #22BCE0;
 }
 body{
 	background: #EEEEEE;
-	font-family: Arial;
+	font-family: "Open Sans"; 
 	font-size: 16px;
 }
 footer{
@@ -41,11 +83,18 @@ header h1{
 	font-weight: normal;
 	margin: 0px 70px 0px 0px;
 }
-header #logo img{
+header #logo{
 	border-right: 1px solid white;
 	padding-right: 0.5rem;
 	margin-right: 0.5rem;
+}
+header #logo img:hover{
+	transform: rotate(360deg);
+}
+
+header #logo img{
 	width: 3.25rem;
+	transition: 0.5s;
 }
 header #avatar{
 	margin: 0.5rem 0.5rem 0 0;
@@ -56,11 +105,15 @@ header #avatar{
 header #avatar img{
 	border-radius: 50%;
 	width: 3.4375rem;
+	transition: 2s;
+}
+header #avatar img:hover{
+	transform: rotate(360deg);
 }
 nav{
 	background: #80BCA3;
 	margin: 0px;
-	padding: 0 0.5rem;
+	padding: 0 6rem 0 0.5rem;
 	position: relative;
 }
 nav ul{
@@ -77,21 +130,41 @@ nav ul #publicar_nav{
 	right: 0px;
 	top: -0.4rem;
 }
-nav ul #publicar_nav a{
+nav ul #publicar_nav button{
+	color: white;
 	background: #22BCE0;
+	border-color:  #22BCE0;
 	border-radius: 0.3rem;
 	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
 	font-style: italic;
-	padding: 0.8rem 0.5rem;
+	margin-left: 10px;
+	padding: 0.8rem 0.5rem 0.8rem 0.5rem;
 	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
 }
+nav ul #publicar_nav button:before{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+nav ul #publicar_nav button:hover :before{
+	font-size: 20px;
+	color: red;
+}
+
 nav ul li a{
 	color: white;
 	display: block;
 	padding: 0.5rem 0px;
 	text-decoration: none;
+	transition: 0.3s;
+}
+nav ul li a:hover{
+	background: #343854;
 }
 
+aside{
+	display: none;
+}
 #contenido{
 	margin: 1rem;
 }
@@ -110,7 +183,7 @@ nav ul li a{
 }
 #contenido .item .datos_item{
 	color: #AAA;
-	margin: 1rem 1rem 0 0;
+	margin: 1rem 1rem 1rem 0;
 	text-align: right;
 }
 #contenido .item .datos_item .tag_item{
@@ -148,12 +221,58 @@ nav ul li a{
 	top: 100%;
 	width: 90%;
 }
+#contenido .item .votacion a{
+	text-decoration: none;
+}
+#contenido .item .votacion .up{
+	color: #22BC68;
+}
+#contenido .item .votacion .down{
+	color: #DD4F24;
+}
+#contenido .item .votacion .guardar_item{
+	color: #FFBE2C;
+}
 #contenido .item .votacion .comentarios_item,
 #contenido .item .votacion .guardar_item{
 	float: right;
 }
 
+.formulario input{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	padding: 0.2rem 0.6rem;}
 
+.ocultar{
+	display: none;
+}
+.mostrar{
+	display: inline-block;
+}
+
+@media screen and (min-width: 757px){
+	#contenido{
+		overflow: hidden;
+	}
+	#contenido .item{
+		float: left;
+		width: 49%;
+	}
+	#contenido .item:nth-child(odd){
+		margin-right: 2%;
+	}
+}
+@media screen and (min-width: 1000px){
+	aside{
+		display: block;
+		float: right;
+		margin: 1rem;
+		width: 20%;
+	}
+	video{
+		width: 100%;
+	}
+}
 
 
 
