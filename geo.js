@@ -14,4 +14,8 @@ function geoExito(posicion){
 	obtenerGeoInformacion(lat, lon);
 };
 
-geo.getCurrentPosition(geoExito, geoError, geoOpciones);
+geo.getCurrentPosition(geoExito, geoError, {
+	enableHightAccuracy: true,
+	timeout: 5000,
+	maximumAge: 0
+});
