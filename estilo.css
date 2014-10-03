@@ -8,6 +8,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@import http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700;
 
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
@@ -112,14 +113,12 @@ header #avatar img:hover{
 }
 nav{
 	background: #80BCA3;
-	margin: 0px;
-	padding: 0 6rem 0 0.5rem;
 	position: relative;
 }
 nav ul{
 	list-style: none;
 	margin: 0px;
-	padding: 0px;
+	padding: 0 6em 0 .5em;
 }
 nav ul li{
 	display: inline-block;
@@ -130,25 +129,21 @@ nav ul #publicar_nav{
 	right: 0px;
 	top: -0.4rem;
 }
-nav ul #publicar_nav button{
-	color: white;
+nav ul #publicar_nav .disabled{
+	cursor: default;
+	background: grey;
+}
+
+nav ul #publicar_nav a{
 	background: #22BCE0;
-	border-color:  #22BCE0;
 	border-radius: 0.3rem;
 	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
 	font-style: italic;
-	margin-left: 10px;
-	padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+	padding: 0.8rem 0.5rem;
 	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
 }
-nav ul #publicar_nav button:before{
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-nav ul #publicar_nav button:hover :before{
-	font-size: 20px;
-	color: red;
+nav ul #publicar_nav a:hover{
+	box-shadow: 0 0 30px white;
 }
 
 nav ul li a{
@@ -243,13 +238,6 @@ aside{
 	border-radius: 5px;
 	padding: 0.2rem 0.6rem;}
 
-.ocultar{
-	display: none;
-}
-.mostrar{
-	display: inline-block;
-}
-
 @media screen and (min-width: 757px){
 	#contenido{
 		overflow: hidden;
@@ -269,11 +257,36 @@ aside{
 		margin: 1rem;
 		width: 20%;
 	}
-	video{
+	video, #geo{
 		width: 100%;
 	}
+
 }
 
+/**
+ * FORMULARIO
+ */
+
+.formulario{
+	padding: 1em;
+	text-align: right;
+	display: none;
+}
+
+.formulario input{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0.2em 0.6em;
+}
+
+.formulario input[type="submit"]{
+	background: #22BCE0;
+	border-color: #22BCE0;
+	box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+	font-style: italic;
+	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+	color: white;
+}
 
 
 

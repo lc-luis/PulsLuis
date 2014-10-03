@@ -4,16 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="Proyecto de diseño web online de Luis Fernández">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="estilo.css">
 	<title>Proyecto PulsLuis</title>
 </head>
-<body onload="inicio()">
+<body>
 	<header>
 		<figure id="logo"><img src="images/logo.png" alt="logo"></figure>
 		<h1>Puls2014: Comunidad de personas</h1>
-		<figure id="avatar"><img src="images/pablo.jpeg" alt="avatar"></figure>
+		<figure id="avatar"></figure>
 	</header>
 	<nav>
 		<ul>
@@ -22,22 +21,19 @@
 			<li><a href="#">Javascript</a></li>
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
-			<li>
-				<form action="" type="POST" class="formulario" id="formulario">
-					<input class="ocultar" type="text" name="titulo" id="form_titulo" placeholder="Titulo" required/>
-					<input class="ocultar" type="text" name="autor" id="form_autor" placeholder="Autor" required/>
-					<li id="publicar_nav">
-						<button type="submit" name="form_submit" id="form_submit">
-							<span clas="boton">
-								<span class="icon-pluma"></span>Publicar
-							</span>
-						</button>
-					</li>
-				</form>
+			<li id="publicar_nav">
+				<a href="#" class="icon-pluma" id="mostrar-form">Publicar</a>
 			</li>
 		</ul>
 	</nav>
+	<form action="" id="formulario" class="formulario">
+		<input type="text" id="titulo" placeholder="Título" required>
+		<input type="url" id="url" placeholder="Link" required>
+		<input type="submit" value="Agregar">
+	</form>
 	<aside>
+		<div id="geo"></div>
+		<div id="clima"></div>
 		<video width="320" height="240" autoplay loop controls>
 			<source src="videos/lecturas.m4v" type="video/mp4">
 			<source src="videos/lecturas.ogg" type="video/ogg">
@@ -154,5 +150,12 @@
 	<script src="prefixfree.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="main.js"></script>
+	<script src="geo.js"></script>
+	<script src="ajax.js" ></script>
+	<script>
+	$(function(){
+
+	});
+	</script>
 </body>
 </html>

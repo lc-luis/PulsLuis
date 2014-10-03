@@ -1,0 +1,1 @@
+function geoError(){console.log("No se donde estas")}function geoExito(o){var e=o.coords.latitude,n=o.coords.longitude,t=new Image;t.src="http://maps.googleapis.com/maps/api/staticmap?zoom=12&size=200x200&sensor=false&center="+e+","+n,$("#geo").append(t),obtenerGeoInformacion(e,n)}var geo=navigator.geolocation,geoOpciones={};geo.getCurrentPosition(geoExito,geoError,geoOpciones);
